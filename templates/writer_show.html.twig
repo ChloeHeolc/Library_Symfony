@@ -1,0 +1,16 @@
+{% extends "block.html.twig" %}
+
+{% block main %}
+
+	<h1>{{ writer.name }}</h1>
+	<p>{{ writer.bio }}</p>
+	{% for book in writer.books %}
+
+	<h2>
+		<a href="{{ path('book_show', {'id' : book.id}) }}">
+			{{ book.title }}</a>
+	</h2>
+
+	{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "block.html.twig" %}
+
+{% block main %}
+
+
+	{{form_start(writerForm)}}
+
+	{{form_label(writerForm.name, 'Nom de l\'auteur : ', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(writerForm.name, {'attr' : {'class' : 'input', 'placeholder' : 'Nom de l\'auteur' } } ) }}
+
+	{{form_label(writerForm.bio, 'Biographie : ', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(writerForm.bio, {'attr' : {'class' : 'input', 'placeholder' : 'Biographie :' } } ) }}
+
+	{{form_widget(writerForm.Enregistrer, {'attr' : {'class' : 'button'} } ) }}
+	
+
+{{form_end(writerForm)}}
+{% endblock %}

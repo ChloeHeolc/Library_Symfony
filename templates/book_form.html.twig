@@ -1,0 +1,26 @@
+{% extends "block.html.twig" %}
+
+{% block main %}
+
+	<div class="boxform">
+
+	{{form_start(bookForm)}}
+
+
+	{{form_label(bookForm.title, 'Titre du livre : ', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(bookForm.title, {'attr' : {'class' : 'input', 'placeholder' : 'Titre du livre' } } ) }}
+
+	{{form_label(bookForm.resume, 'Description du livre : ', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(bookForm.resume, {'attr' : {'class' : 'input', 'placeholder' : 'Description du livre' } } ) }}
+
+    {{form_label(bookForm.year, 'Année de parution du livre : ', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(bookForm.year, {'attr' : {'class' : 'input', 'placeholder' : 'Année de parution du livre' } } ) }}
+
+	{{form_widget(bookForm.Enregistrer, {'attr' : {'class' : 'button'} } ) }}
+
+	
+
+	{{form_end(bookForm)}}
+	</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "block.html.twig" %}
+
+{% block main %}
+
+    {% for book in books %}
+	{# img book.cover #}
+		<div class="boxBooks">
+			<div class="livre">
+				<h2>
+					<a href="{{ path('book_show', {'id' : book.id} ) }}">
+					{{ book.title }}</a>
+				</h2>
+				<h4>{{ book.year }}</h4>
+				<h4>{{ book.writer.name }}</h4>
+			</div>
+		</div>
+		<hr>
+	{% endfor %}
+
+{% endblock %}

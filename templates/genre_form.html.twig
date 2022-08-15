@@ -1,0 +1,19 @@
+{% extends "block.html.twig" %}
+
+{% block main %}
+
+	{{form_start(genreForm)}}
+
+	{{form_label(genreForm.name, 'Nom du genre : ', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(genreForm.name, {'attr' : {'class' : 'input', 'placeholder' : 'Nom du genre' } } ) }}
+
+	{{form_label(genreForm.description, 'Description du genre : ', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(genreForm.description, {'attr' : {'class' : 'input', 'placeholder' : 'Description du genre' } } ) }}
+
+	{{form_widget(genreForm.Enregistrer, {'attr' : {'class' : 'button'} } ) }}
+
+
+
+{{form_end(genreForm)}}
+{% endblock %}
+
